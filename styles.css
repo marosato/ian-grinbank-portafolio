@@ -291,21 +291,6 @@ h3 {
 .btn:hover, .work-link:hover { box-shadow: var(--shadow); transform: translateY(-3px); }
 .btn.light { background: #f5f3ed; border-color: #f5f3ed; color: #101114; }
 
-.format-track {
-  align-items: center;
-  border-top: 1px solid var(--line);
-  color: var(--muted);
-  display: flex;
-  font-size: 0.7rem;
-  font-weight: 800;
-  gap: 12px;
-  letter-spacing: 0.1em;
-  margin-top: clamp(36px, 6vw, 68px);
-  padding-top: 18px;
-}
-
-.format-track i { background: var(--accent); height: 4px; width: 4px; }
-
 .hero-visual {
   align-items: stretch;
   background: linear-gradient(145deg, var(--dark-panel), #252a33);
@@ -455,6 +440,7 @@ h3 {
 }
 
 .brand-logo-frame.dark { background: #101114; }
+.brand-logo-frame.prina { background: #004C94; }
 .brand-logo-frame.light { background: #fff; }
 .brand-logo-frame img { height: 100%; object-fit: contain; width: 100%; }
 .link-row { gap: 8px; margin-top: 20px; }
@@ -756,8 +742,6 @@ footer p:nth-child(2) { color: var(--muted); text-align: center; }
   .hero-role { line-height: 1.8; }
   .hero-role span { margin: 0 2px; }
   .hero-actions .btn, .contact-actions .btn { width: 100%; }
-  .format-track { gap: 7px; justify-content: space-between; }
-  .format-track span { font-size: .6rem; }
   .hero-visual { min-height: 520px; }
   .hero-visual img { min-height: 520px; }
   .frame-corners { inset: 14px; }

@@ -23,7 +23,7 @@ const brands = [
     ],
     logo: "https://prina.net/assets/img/logos/logo-inteligencia-blanco.png",
     logoAlt: "Logo oficial de Prina Argentina",
-    logoTheme: "dark",
+    logoTheme: "prina",
     pendingAsset: "Versión azul pendiente",
     links: [
       { label: "Sitio web", url: "https://prina.net/" },
