@@ -125,3 +125,8 @@ Este archivo registra tareas realizadas por Codex que cambian el árbol de traba
 - La jerarquía profesional visible pasó a “Analista de Marketing • Content Creator • Edición de video • Solución Integral de Eventos”, con actualización equivalente en footer y metadatos descriptivos.
 - En pantallas de hasta 680 px el modal usa ancho basado en viewport, alto máximo con `dvh`, layout flex y una etapa de video vertical flexible.
 - Para dispositivos de hasta 480 px de alto se reduce el header y la etapa usa el alto restante, contemplando celulares en orientación horizontal.
+
+**Ajustes de Inicio y Prina Argentina:**
+
+- Se retiró del hero la banda “REELS • MARCAS • EVENTOS • PANTALLAS LED”.
+- El fondo del marco del logo de Prina Argentina cambió exclusivamente a `#004C94`; las demás tarjetas de marca conservan sus fondos anteriores.

@@ -22,7 +22,7 @@ La página tiene estas áreas:
 - Encabezado sticky con marca “IG”, navegación por anclas, menú móvil y selector de tema.
 - Hero con retrato, presentación y accesos a trabajos, correo e Instagram.
 - “Sobre mí”, con enfoque narrativo y experiencia declarada.
-- “Marcas”, con Griller, Prina Argentina y Cartas Coleccionables. Sus títulos enlazan al sitio oficial cuando existe; Cartas Coleccionables enlaza a Instagram. Los accesos inferiores son botones con SVG.
+- “Marcas”, con Griller, Prina Argentina y Cartas Coleccionables. Sus títulos enlazan al sitio oficial cuando existe; Cartas Coleccionables enlaza a Instagram. Los accesos inferiores son botones con SVG. El marco del logo de Prina usa exclusivamente el fondo `#004C94`.
 - “Trabajos”, con siete piezas alojadas en Google Drive y reproducidas dentro de un modal:
   - tres de Prina Argentina;
   - cuatro de Cartas Coleccionables.
