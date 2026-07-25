@@ -1,8 +1,12 @@
 # Memoria del proyecto
 
+## Identidad inmutable salvo instrucción explícita
+
+El nombre y título del portafolio es `Ian Grinbank | Portafolio`. El cliente indicó expresamente que no debe modificarse salvo nueva solicitud suya.
+
 ## Identidad y objetivo verificables
 
-El sitio comunica los servicios y trabajos de Ian Grinbank. El contenido visible lo describe como “Editor de video, creador de contenido y analista de marketing” y afirma más de seis años de experiencia. Esa afirmación forma parte del copy del sitio; no hay documentación adicional que la valide de forma independiente.
+El sitio comunica los servicios y trabajos de Ian Grinbank. La jerarquía profesional definida por el cliente es “Analista de Marketing, Content Creator y Edición de video”. El contenido visible afirma más de seis años de experiencia; esa afirmación ya existía y fue ratificada en el brief, pero no hay documentación adicional que la valide de forma independiente.
 
 El idioma del documento es `es-AR`. La propuesta central es adaptar la edición audiovisual al canal de publicación: redes, eventos, pantallas LED, producto y comunicación institucional/comercial.
 
@@ -10,14 +14,18 @@ El idioma del documento es `es-AR`. La propuesta central es adaptar la edición 
 
 La página tiene estas áreas:
 
-- Encabezado sticky con marca “IG”, navegación por anclas y selector de tema.
+- La navegación principal usa una animación de 850 ms con easing cúbico y respeta `prefers-reduced-motion`.
+- “Perfil” usa tres pestañas verticales que actualizan un único panel de detalle a la derecha.
+
+- Encabezado sticky con marca “IG”, navegación por anclas, menú móvil y selector de tema.
 - Hero con retrato, presentación y accesos a trabajos, correo e Instagram.
 - “Sobre mí”, con enfoque narrativo y experiencia declarada.
-- “Marcas”, con Griller, Prina Argentina y Cartas Coleccionables.
-- “Trabajos”, con siete piezas externas alojadas en Google Drive:
+- “Marcas”, con Griller, Prina Argentina y Cartas Coleccionables. Sus títulos enlazan al sitio oficial cuando existe; Cartas Coleccionables enlaza a Instagram. Los accesos inferiores son botones con SVG.
+- “Trabajos”, con siete piezas alojadas en Google Drive y reproducidas dentro de un modal:
   - tres de Prina Argentina;
   - cuatro de Cartas Coleccionables.
-- “Servicios”, con cuatro ofertas: videos para redes, contenido para marcas, eventos/pantallas LED y versiones multicanal.
+- “Servicios”, con videos para redes, contenido para marcas, contenido audiovisual para pantallas LED y eventos, y adaptaciones multicanal.
+- “Soluciones integrales”, sobre planificación, coordinación de equipamiento/proveedores y contenido final.
 - “Contacto”, mediante WhatsApp, correo e Instagram.
 - Footer descriptivo.
 
@@ -29,7 +37,7 @@ La página tiene estas áreas:
 - Griller: web e Instagram `griller.ba`.
 - Prina Argentina: web, Instagram y LinkedIn.
 - Cartas Coleccionables: Instagram `cartas.coleccionables`.
-- Siete IDs de Google Drive enlazados desde el HTML se usan tanto para la vista como para miniaturas.
+- Siete IDs de Google Drive centralizados en `app.js` generan miniatura, fuente MP4 directa y enlace de respaldo.
 
 **Pendiente de confirmar:** vigencia, permisos públicos y propiedad de todos los enlaces externos y datos de contacto.
 
@@ -43,12 +51,16 @@ La página tiene estas áreas:
 - Hover/focus en enlaces, botones, tarjetas y miniaturas.
 - Responsive mediante breakpoints CSS en 980 px y 640 px.
 - Metadatos Open Graph y Twitter para compartir.
+- Modal accesible con reproductor Drive `/preview`, carga diferida, controles, Escape, cierre por backdrop, bloqueo de scroll, foco restaurado y fallback. La abstracción mantiene soporte para `<video>` nativo futuro.
+- Menú responsive accesible bajo 900 px.
+- Fallback de visibilidad para `IntersectionObserver`, hash directo y movimiento reducido.
 
 ## Stack real
 
 - HTML5 semántico.
 - CSS3 nativo: custom properties, grid, flexbox, media queries, transiciones, `clamp`, `aspect-ratio`, `backdrop-filter`.
-- JavaScript ES6+ nativo embebido.
+- JavaScript ES6+ nativo en `app.js`.
+- Manrope provisional cargada desde Google Fonts con fallbacks de sistema y token `--font-main`.
 - Recursos raster PNG/JPEG.
 - Dependencias runtime externas solo por contenido: logos remotos, miniaturas/videos de Google Drive y enlaces a sitios/redes.
 - Hosting observado: Vercel. La URL declarada respondió correctamente el 2026-07-25; su condición de entorno canónico y el flujo de despliegue siguen **Pendiente de confirmar**.
@@ -70,12 +82,12 @@ Los tres QR muestran accesos de Instagram para las marcas indicadas por sus nomb
 
 ## Estado actual al 2026-07-25
 
-- Sitio funcionalmente contenido en dos archivos de texto y seis imágenes.
+- Sitio funcionalmente contenido en tres archivos de código y seis imágenes.
 - Rama `main` sincronizada con `origin/main` antes de crear esta memoria.
 - Último trabajo registrado: incorporación y ajuste de metadatos/imagen social.
 - No había cambios locales al iniciar la auditoría.
 - Esta sesión agrega únicamente documentación bajo `.codex/`.
-- No se modificó lógica, diseño, arquitectura ni dependencias.
+- La actualización visual de 2026-07-25 modifica diseño y comportamiento sin agregar paquetes ni framework.
 
 ## Calidad y limitaciones verificadas
 
@@ -84,11 +96,9 @@ Los tres QR muestran accesos de Instagram para las marcas indicadas por sus nomb
 - Parte del contenido depende de hosts externos.
 - Los QR están versionados pero no usados en la página.
 - Hay selectores CSS sin elementos HTML correspondientes: `.editor-panel`, `.panel-dot`, `.timeline` y `.portfolio-intro`.
-- La navegación móvil se oculta por completo a menos de 980 px; no existe menú alternativo, aunque la página sigue siendo desplazable.
-- Las secciones `.reveal` parten con `opacity: 0`; no hay fallback para JavaScript deshabilitado o fallo/no soporte de `IntersectionObserver`.
-- No hay tratamiento CSS de `prefers-reduced-motion`.
-- La navegación activa inicia su reducción en `#sobre-mi`, por lo que puede marcar “Sobre mí” incluso mientras el hero está activo.
-- En la validación del despliegue del 2026-07-25, abrir directamente `/#contacto` desplazó la página hasta esa sección, pero `#contacto.reveal` permaneció sin `is-visible` y la navegación activa marcó `#sobre-mi`.
+- Los componentes renderizados desde `app.js` requieren JavaScript para mostrar marcas, trabajos y servicios.
+- Las fuentes de video siguen dependiendo de permisos y disponibilidad de Google Drive.
+- La revisión local automatizada cubrió 1440, 1280, 1024, 768, 390 y 360 px, además del modal, menú, tema, hash y consola.
 
 ## Desconocidos
 

@@ -2,44 +2,37 @@
 
 ## Fecha y alcance
 
-2026-07-25. Se analizó y documentó el repositorio sin modificar la aplicación.
+2026-07-25. Se implementó una actualización visual y funcional integral del portfolio en la rama `codex/portfolio-visual-update`.
 
 ## Estado Git de referencia
 
-- Rama: `main`.
-- Tracking: `origin/main`.
+- Rama de trabajo: `codex/portfolio-visual-update`.
 - Remoto: `https://github.com/marosato/ian-grinbank-portafolio.git`.
-- `HEAD`: `8cb8c15558cb665edce0f5d03d2b36ad06a7b040`.
-- Último commit: `Update social preview metadata`.
+- Base de la rama: `a538f3eb1479f3883230f0838b525aefe1828b71`.
+- Último commit en la base: `Merge pull request #1`.
 - Estado antes de esta tarea: limpio y sincronizado.
-- Cambios de esta tarea: nueve archivos nuevos bajo `.codex/`.
-- Rama de publicación preparada: `agent/codex-project-memory`.
-- La publicación fue autorizada; confirmar el commit, push y PR definitivos con Git/GitHub al iniciar la próxima sesión.
+- Cambios sin commit: `index.html`, `styles.css`, nuevo `app.js` y memoria `.codex/` relacionada.
 
 Confirmar estos datos al iniciar la próxima sesión.
 
 ## Estado funcional reconstruido
 
-El producto es un portafolio estático de una página para Ian Grinbank. Usa HTML, CSS y JavaScript nativos, seis imágenes locales y varios recursos/enlaces externos. Presenta perfil, tres marcas, siete trabajos, cuatro servicios y tres canales de contacto. Incluye responsive, tema persistente, navegación activa, animaciones de scroll, tilt y metadatos sociales.
+El producto sigue siendo un portfolio estático con HTML, CSS y JavaScript nativos. La identidad ahora prioriza Analista de Marketing, Content Creator y Edición de video. El hero oscuro conserva el título “Ian Grinbank” en gran escala, el texto introductorio solicitado y accesos a trabajos, correo e Instagram. La navegación interna tiene easing propio. Perfil usa pestañas verticales que actualizan un panel derecho. Marcas incorpora enlaces en los títulos y botones sociales mejorados. Incluye siete trabajos con reproducción interna, autoplay, navegación anterior/siguiente e iconos SVG adaptables; cuatro servicios en matriz editorial; soluciones integrales; y un Contacto guiado que prepara mensajes según el tipo de proyecto.
 
-No existe backend, framework, sistema de paquetes, configuración de build, variables de entorno, pruebas, CI ni documentación previa.
+No existe backend, framework, sistema de paquetes, configuración de build, variables de entorno, pruebas ni CI.
 
 ## Riesgos abiertos más relevantes
 
-1. No existe QA automatizado; el 2026-07-25 se realizó una primera validación manual del despliegue.
-2. Las secciones con `.reveal` dependen de JavaScript para ser visibles.
-3. La navegación desaparece bajo 980 px sin alternativa.
-4. La navegación activa puede seleccionar “Sobre mí” durante el hero.
-5. Logos, miniaturas y videos dependen de terceros.
-6. Hay CSS muerto aparente y tres QR locales no usados.
-7. URL/despliegue de Vercel, derechos de recursos y requisitos originales no están documentados.
-8. La entrada directa `/#contacto` llegó a la posición correcta, pero dejó la sección invisible y marcó `#sobre-mi` como activo.
+1. No existe suite automatizada, lint ni build.
+2. Logos, tipografía y videos dependen de terceros.
+3. Los componentes de marcas, trabajos y servicios requieren JavaScript.
+4. Faltan tres assets definitivos del cliente.
 
 ## Próxima tarea recomendada
 
-Corregir y volver a validar la entrada directa por hash y el cálculo de navegación activa. Después completar una revisión manual de teclado, movimiento reducido, destinos externos y previews sociales.
+Revisar el resultado con el cliente, publicar la rama en un PR cuando lo autorice y reemplazar los tres assets definitivos cuando sean entregados.
 
-Las correcciones propuestas están detalladas en `TODO.md`; requieren una nueva instrucción porque esta sesión solo autorizó análisis y documentación.
+Los pendientes de assets y validación final están detallados en `TODO.md`.
 
 ## Pendiente de confirmar
 

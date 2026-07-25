@@ -21,6 +21,7 @@ Si hay contradicción, documentarla y pedir confirmación cuando afecte una deci
 ## Alcance y preservación
 
 - No cambiar copy, datos de contacto, marcas, enlaces, imágenes o afirmaciones profesionales sin solicitud o confirmación explícita.
+- El nombre del portafolio y título canónico es `Ian Grinbank | Portafolio`. No modificarlo ni reinterpretarlo salvo indicación explícita del cliente.
 - No cambiar diseño, arquitectura o dependencias fuera del alcance solicitado.
 - No introducir framework, build system o paquete solo por preferencia.
 - Preservar el carácter estático del sitio salvo decisión explícita.

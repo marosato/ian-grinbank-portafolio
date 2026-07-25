@@ -8,7 +8,7 @@ Portafolio audiovisual en español argentino de Ian Grinbank, presentado como ed
 
 - Entrada única: `index.html`.
 - Estilos: `styles.css`.
-- JavaScript: bloque inline al final de `index.html`.
+- JavaScript: `app.js`, cargado con `defer`.
 - Recursos locales: `assets/`.
 - No hay backend, base de datos, API propia ni sistema de autenticación.
 - No hay `package.json`, lockfile, framework, bundler, TypeScript, pruebas ni scripts.
@@ -35,6 +35,7 @@ El código no define un comando oficial. Puede abrirse `index.html` directamente
 │   ├── qr-prina-argentina.jpeg
 │   └── social-preview.jpg
 ├── .gitignore
+├── app.js
 ├── index.html
 └── styles.css
 ```
@@ -54,9 +55,9 @@ El código no define un comando oficial. Puede abrirse `index.html` directamente
 
 - Remoto: `origin` → `https://github.com/marosato/ian-grinbank-portafolio.git`.
 - Rama observada: `main`, siguiendo `origin/main`.
-- `HEAD` auditado: `8cb8c15` (`Update social preview metadata`).
-- Estado inicial de esta auditoría: limpio, `main...origin/main`.
-- Todo el historial visible consta de 11 commits del 2026-07-24.
+- `HEAD` de `main` previo al rediseño: `a538f3e` (`Merge pull request #1`).
+- Estado inicial del rediseño: limpio, `main...origin/main`.
+- La rama activa de esta actualización es `codex/portfolio-visual-update`.
 - Autora y committer de esos commits: Macarena Rosato.
 
 ## Despliegue
@@ -67,7 +68,7 @@ El HTML declara `https://ian-grinbank-portafolio.vercel.app/` en Open Graph y us
 
 ## Validación disponible
 
-No existen scripts automatizados. La validación actual debe ser manual:
+No existen scripts automatizados. `node --check app.js` valida la sintaxis JavaScript; el resto de la validación es manual o mediante comprobaciones estáticas:
 
 - carga de HTML y CSS;
 - consola sin errores;
@@ -77,5 +78,5 @@ No existen scripts automatizados. La validación actual debe ser manual:
 - efecto tilt con puntero;
 - visualización responsive;
 - carga de imágenes locales y remotas;
-- apertura de enlaces de Google Drive, redes, correo y WhatsApp;
+- reproducción de los siete MP4 de Google Drive dentro del modal y sus enlaces de respaldo;
 - metadatos Open Graph/Twitter.
