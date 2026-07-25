@@ -26,4 +26,4 @@ Orden de lectura recomendado:
 8. `CHANGELOG_AI.md`
 9. `SESSION_SUMMARY.md`
 
-Estado base documentado: rama `main`, commit `8cb8c15`, auditado el 2026-07-25. Confirmar siempre que siga vigente.
+Estado base previo al rediseño actual: rama `main`, commit `a538f3e`, auditado el 2026-07-25. La rama de trabajo es `codex/portfolio-visual-update`; confirmar siempre que siga vigente.

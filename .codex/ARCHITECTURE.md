@@ -9,7 +9,12 @@ Navegador
   ├── index.html
   │   ├── estructura y contenido
   │   ├── metadatos sociales/SEO
-  │   └── JavaScript inline de interacción
+  │   └── contenedores para componentes renderizados
+  ├── app.js
+  │   ├── datos de marcas, proyectos y servicios
+  │   ├── funciones de renderizado reutilizables
+  │   ├── modal de video y gestión de foco
+  │   └── navegación, tema, menú y animaciones
   ├── styles.css
   │   ├── tokens de color claro/oscuro
   │   ├── layout y componentes
@@ -37,7 +42,8 @@ Navegador
   - `#servicios`;
   - `#contacto`.
 - `<footer>`.
-- `<script>` inline.
+- modal accesible de video al final del `<body>`.
+- `<script src="app.js" defer>`.
 
 No hay enrutamiento; las rutas internas son IDs de sección.
 
@@ -58,18 +64,18 @@ No se descargan fuentes ni bibliotecas CSS.
 
 ## Capa de comportamiento
 
-El script no exporta módulos y se ejecuta después del DOM:
+`app.js` no exporta módulos y se ejecuta con `defer`:
 
-1. Crea un `IntersectionObserver` y agrega `is-visible` a `.reveal`.
-2. Reúne enlaces `.nav a`, resuelve sus secciones y calcula el activo en cada scroll.
-3. Lee `localStorage["ian-theme"]`; aplica `dark-mode` si vale `dark`.
-4. Mantiene `aria-pressed` y `aria-label` del botón de tema.
-5. Persiste el tema al hacer clic.
-6. Aplica variables CSS de rotación al hero ante movimiento/salida del puntero.
+1. Renderiza marcas, siete proyectos y servicios desde estructuras de datos.
+2. Crea un `IntersectionObserver` con fallback y agrega `is-visible` a `.reveal`.
+3. Calcula la navegación activa incluyendo `#inicio` y habilita menú móvil.
+4. Lee y persiste `localStorage["ian-theme"]`.
+5. Aplica variables CSS de rotación al hero cuando el movimiento está permitido.
+6. Abre un único reproductor bajo demanda, actualmente un embed `/preview` de Drive, y mantiene soporte para `<video>` nativo; gestiona Escape, backdrop, foco, scroll y fallback.
 
 ## Datos y estado
 
-No hay modelo de datos separado. El contenido está hardcodeado en HTML.
+El contenido estructural está en HTML. Marcas, proyectos y servicios están centralizados como arrays de objetos en `app.js` y se renderizan mediante funciones reutilizables.
 
 El único estado persistente del cliente es la preferencia de tema en `localStorage`. No sale del dispositivo ni se sincroniza.
 
@@ -78,7 +84,8 @@ El único estado persistente del cliente es la preferencia de tema en `localStor
 No existen SDKs ni llamadas `fetch`. La integración se limita a URLs:
 
 - `<img>` remoto para logos y miniaturas;
-- `<a>` para Google Drive, webs, redes, WhatsApp y `mailto:`;
+- reproductor `/preview` de Google Drive con soporte preparado para fuentes MP4 nativas y enlaces de respaldo;
+- `<a>` para webs, redes, WhatsApp y `mailto:`;
 - URLs absolutas en metadatos sociales.
 
 Esto reduce complejidad, pero hace que parte de la presentación y del portafolio dependa de disponibilidad, permisos y políticas de terceros.

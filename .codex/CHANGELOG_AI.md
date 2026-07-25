@@ -46,4 +46,67 @@ Este archivo registra tareas realizadas por Codex que cambian el árbol de traba
 - Se reprodujo un fallo al entrar directamente a `/#contacto`: la sección quedó sin `is-visible` y la navegación activa señaló `#sobre-mi`.
 - El navegador no permitió abrir el árbol local mediante `file://`; la validación visual corresponde al despliegue actualmente publicado.
 
-**Publicación:** documentación preparada y validada para publicarse en la rama `agent/codex-project-memory`; el resultado definitivo debe confirmarse con el estado actual de Git y GitHub.
+**Publicación:** fusionada en `main` mediante el PR #1 y el commit de merge `a538f3e`.
+
+## 2026-07-25 — Rediseño audiovisual y tecnológico
+
+**Solicitud:** modernizar el portfolio, priorizar Marketing, Content Creator y Edición de video, mejorar layouts, agregar soluciones integrales y reproducir siete videos dentro del sitio.
+
+**Implementación:**
+
+- Rediseño responsive con Manrope provisional, escala tipográfica fluida y lenguaje visual tecnológico.
+- Reescritura comercial del perfil, hero, servicios, soluciones integrales y contacto sin inventar métricas.
+- Datos de marcas, proyectos y servicios centralizados en `app.js`.
+- Modal accesible con reproductor Drive limpio y diferido, soporte preparado para `<video>` nativo, controles, Escape, backdrop, foco, bloqueo de scroll y fallback.
+- Grillas adaptativas, última pieza expandida, menú móvil y mejoras de contraste/tamaños táctiles.
+- Correcciones para hash directo, navegación activa, falta de `IntersectionObserver` y movimiento reducido.
+
+**Assets pendientes:** logo azul de Prina, SVG oficial de Cartas Coleccionables y fotografía formal seleccionada por Ian.
+
+**Validación:** sintaxis JavaScript, estructura HTML/CSS, referencias locales, ausencia de IDs duplicados, streaming parcial de siete MP4, seis anchos responsive sin overflow, capturas desktop/móvil, siete aperturas de modal, Escape, backdrop, foco, menú, tema, hash directo y consola sin errores.
+
+**Ajuste posterior solicitado por el cliente:**
+
+- El hero recuperó el título “Ian Grinbank”, el texto introductorio y los accesos “Ver trabajos”, “Enviar correo” e “Instagram”.
+- Se conservaron la jerarquía profesional “Analista de Marketing • Content Creator • Edición de video” y la lista “REELS • MARCAS • EVENTOS • PANTALLAS LED”.
+- Los llamados de los proyectos ahora dicen “Reproducir video”.
+- El reproductor de Google Drive recibe `autoplay=1` al abrirse desde una acción del usuario.
+
+**Segunda iteración visual y funcional:**
+
+- El modo oscuro pasó a ser el valor inicial; una preferencia explícita guardada por la persona usuaria continúa teniendo prioridad.
+- El nombre del hero ganó escala y composición en dos líneas, y la jerarquía profesional incorporó una barra vertical de acento.
+- Las tres especialidades del Perfil se convirtieron en un acordeón accesible con detalle individual, estado ARIA y operación por teclado.
+- Se aumentó el tamaño de la navegación principal.
+- El modal de trabajos redujo su ancho máximo de 1120 px a 860 px e incorporó navegación circular anterior/siguiente mediante botones laterales y flechas del teclado.
+- Servicios abandonó la lista lineal y pasó a una matriz editorial de cuatro tarjetas.
+
+**Validación:** sintaxis JavaScript, `git diff --check`, modo oscuro inicial, ausencia de overflow en escritorio, acordeón exclusivo, rótulos ARIA, cambio real de proyecto y URL con autoplay desde el modal, cierre y devolución de foco, e inspección visual de hero, Perfil, Servicios y reproductor.
+
+**Tercera iteración de interacción:**
+
+- Las flechas laterales del modal ahora son SVG inline con trazo basado en `currentColor`; no dependen de imágenes rasterizadas ni de un color de fondo específico.
+- Tras recibir la referencia visual correcta, los SVG se simplificaron a chevrones gruesos y redondeados, sin asta horizontal; el JPG de referencia no se incorporó al repositorio.
+- El reproductor nativo preparado para fuentes directas establece el volumen inicial en `0.15`.
+- El iframe actual de Google Drive no ofrece una API documentada para imponer ese nivel de volumen desde el sitio; esta limitación queda registrada como pendiente técnico.
+- Contacto se convirtió en un selector guiado de cuatro necesidades. La opción elegida actualiza el mensaje de WhatsApp y el asunto/cuerpo del correo, conserva Instagram como canal alternativo y comunica un siguiente paso concreto.
+
+**Validación:** dos SVG con trazo heredado, selector exclusivo con `aria-pressed`, actualización efectiva de URLs codificadas de WhatsApp y correo, ausencia de overflow y revisión visual de Contacto y modal.
+
+**Título protegido y prueba de volumen:**
+
+- El título del documento y los metadatos Open Graph/Twitter quedaron fijados en `Ian Grinbank | Portafolio` por instrucción explícita del cliente.
+- Se registró que ese nombre no debe cambiarse sin una nueva indicación explícita.
+- Se probaron en el `<video>` real dos variantes directas de Drive (`drive.usercontent.google.com/download` y `drive.google.com/uc?export=download`). Ambas permanecieron en `readyState = 0`, sin duración y activaron el fallback.
+- Se restauró `/preview?autoplay=1`, que sí reproduce. El 15 % permanece configurado para fuentes nativas, pero no puede imponerse al iframe cross-origin de Drive.
+- Los tamaños obtenidos mediante solicitudes parciales suman 192.880.454 bytes (183,9 MiB); por ese peso no se copiaron los videos al repositorio como solución improvisada.
+
+**Navegación, Perfil y Marcas:**
+
+- Los enlaces del menú ahora usan desplazamiento animado de 850 ms con easing cúbico; con movimiento reducido el salto continúa siendo inmediato.
+- Perfil dejó de ser un acordeón: los bullets son pestañas verticales y actualizan un panel único a la derecha, con selección ARIA y navegación por flechas, Inicio y Fin.
+- “Explorar trabajos” cambió a “Ver trabajos”.
+- Cada nombre de marca enlaza a su sitio oficial o, cuando no existe, a Instagram.
+- Los enlaces inferiores de las marcas se rediseñaron como botones compactos con SVG y estados hover/foco.
+
+**Validación:** cambio de panel y `aria-labelledby`, selección exclusiva, URLs primarias correctas para tres marcas, seis botones sociales con SVG, ausencia de overflow y sintaxis JavaScript.
