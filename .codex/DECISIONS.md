@@ -142,6 +142,22 @@ Este registro reconstruye decisiones observables. Cuando el motivo no está docu
 
 **Consecuencia:** el nombre funciona como acceso oficial sin mostrar URLs, mientras los enlaces inferiores permanecen visibles como botones secundarios.
 
+## D-021 — Acento azul único
+
+**Estado:** vigente por instrucción explícita del cliente.
+
+**Evidencia:** `--accent` usa `#0C6D97` tanto en el tema claro como en el oscuro; `--accent-soft` conserva variantes de superficie adaptadas a cada tema.
+
+**Consecuencia:** todos los componentes que consumen los tokens de acento cambian coordinadamente sin reemplazos aislados.
+
+## D-022 — Modal móvil basado en viewport dinámico
+
+**Estado:** vigente.
+
+**Evidencia:** las reglas móviles usan `100dvh`, `100vw`, límites de altura y una variante combinada por ancho y alto.
+
+**Consecuencia:** el diálogo, encabezado, controles y área de reproducción permanecen dentro de la pantalla en móviles verticales y horizontales.
+
 ## D-016 — Navegación circular dentro del modal
 
 **Estado:** vigente.

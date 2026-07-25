@@ -17,7 +17,7 @@ Confirmar estos datos al iniciar la próxima sesión.
 
 ## Estado funcional reconstruido
 
-El producto sigue siendo un portfolio estático con HTML, CSS y JavaScript nativos. La identidad ahora prioriza Analista de Marketing, Content Creator y Edición de video. El hero oscuro conserva el título “Ian Grinbank” en gran escala, el texto introductorio solicitado y accesos a trabajos, correo e Instagram. La navegación interna tiene easing propio. Perfil usa pestañas verticales que actualizan un panel derecho. Marcas incorpora enlaces en los títulos y botones sociales mejorados. Incluye siete trabajos con reproducción interna, autoplay, navegación anterior/siguiente e iconos SVG adaptables; cuatro servicios en matriz editorial; soluciones integrales; y un Contacto guiado que prepara mensajes según el tipo de proyecto.
+El producto sigue siendo un portfolio estático con HTML, CSS y JavaScript nativos. La identidad prioriza Analista de Marketing, Content Creator, Edición de video y Solución Integral de Eventos, con `#0C6D97` como acento. El hero oscuro conserva el título “Ian Grinbank” en gran escala, el texto introductorio solicitado y accesos a trabajos, correo e Instagram. La navegación interna tiene easing propio. Perfil usa pestañas verticales que actualizan un panel derecho. Marcas incorpora enlaces en los títulos y botones sociales mejorados. Incluye siete trabajos con reproducción interna, autoplay, navegación anterior/siguiente, iconos SVG y modal adaptado a viewport móvil; cuatro servicios en matriz editorial; soluciones integrales; y un Contacto guiado que prepara mensajes según el tipo de proyecto.
 
 No existe backend, framework, sistema de paquetes, configuración de build, variables de entorno, pruebas ni CI.
 
