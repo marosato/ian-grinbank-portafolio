@@ -114,6 +114,14 @@ Este archivo registra tareas realizadas por Codex que cambian el árbol de traba
 **Vista previa social versionada:**
 
 - Se mantuvo `assets/social-preview.jpg` en 1200 × 630 como imagen horizontal de tarjeta grande.
-- La URL destinada a compartir pasó a `https://ian-grinbank-portafolio.vercel.app/?v=4` para invalidar la caché anterior de WhatsApp.
-- Open Graph y Twitter apuntan a `social-preview.jpg?v=4`; se agregaron canonical, `og:site_name`, `og:image:url` y `twitter:image:alt`.
+- La URL destinada a compartir pasó a `https://ian-grinbank-portafolio.vercel.app/?v=5` para invalidar la caché anterior de WhatsApp.
+- Open Graph y Twitter apuntan a `social-preview.jpg?v=5`; se agregaron canonical, `og:site_name`, `og:image:url` y `twitter:image:alt`.
 - El dominio limpio continúa siendo la URL canónica del sitio.
+
+**Acento azul, especialidad y modal móvil:**
+
+- El sistema de acento naranja se reemplazó por `#0C6D97`; los fondos suaves derivados se ajustaron para modo claro y oscuro.
+- El subtítulo naranja integrado en `assets/social-preview.jpg` se recoloreó al azul de marca sin cambiar fotografía, composición ni dimensiones (1200 × 630).
+- La jerarquía profesional visible pasó a “Analista de Marketing • Content Creator • Edición de video • Solución Integral de Eventos”, con actualización equivalente en footer y metadatos descriptivos.
+- En pantallas de hasta 680 px el modal usa ancho basado en viewport, alto máximo con `dvh`, layout flex y una etapa de video vertical flexible.
+- Para dispositivos de hasta 480 px de alto se reduce el header y la etapa usa el alto restante, contemplando celulares en orientación horizontal.

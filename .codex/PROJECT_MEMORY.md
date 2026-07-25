@@ -4,11 +4,11 @@
 
 El nombre y título del portafolio es `Ian Grinbank | Portafolio`. El cliente indicó expresamente que no debe modificarse salvo nueva solicitud suya.
 
-La URL canónica es `https://ian-grinbank-portafolio.vercel.app/`. Para compartir en aplicaciones con caché de previews se usa actualmente `https://ian-grinbank-portafolio.vercel.app/?v=4`.
+La URL canónica es `https://ian-grinbank-portafolio.vercel.app/`. Para compartir en aplicaciones con caché de previews se usa actualmente `https://ian-grinbank-portafolio.vercel.app/?v=5`.
 
 ## Identidad y objetivo verificables
 
-El sitio comunica los servicios y trabajos de Ian Grinbank. La jerarquía profesional definida por el cliente es “Analista de Marketing, Content Creator y Edición de video”. El contenido visible afirma más de seis años de experiencia; esa afirmación ya existía y fue ratificada en el brief, pero no hay documentación adicional que la valide de forma independiente.
+El sitio comunica los servicios y trabajos de Ian Grinbank. La jerarquía profesional definida por el cliente es “Analista de Marketing, Content Creator, Edición de video y Solución Integral de Eventos”. El contenido visible afirma más de seis años de experiencia; esa afirmación ya existía y fue ratificada en el brief, pero no hay documentación adicional que la valide de forma independiente.
 
 El idioma del documento es `es-AR`. La propuesta central es adaptar la edición audiovisual al canal de publicación: redes, eventos, pantallas LED, producto y comunicación institucional/comercial.
 
@@ -54,6 +54,7 @@ La página tiene estas áreas:
 - Responsive mediante breakpoints CSS en 980 px y 640 px.
 - Metadatos Open Graph y Twitter para compartir.
 - Modal accesible con reproductor Drive `/preview`, carga diferida, controles, Escape, cierre por backdrop, bloqueo de scroll, foco restaurado y fallback. La abstracción mantiene soporte para `<video>` nativo futuro.
+- En móvil, el modal limita ancho y alto mediante unidades dinámicas de viewport y adapta la etapa de reproducción a orientación vertical u horizontal.
 - Menú responsive accesible bajo 900 px.
 - Fallback de visibilidad para `IntersectionObserver`, hash directo y movimiento reducido.
 
