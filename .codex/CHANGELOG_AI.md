@@ -110,3 +110,10 @@ Este archivo registra tareas realizadas por Codex que cambian el árbol de traba
 - Los enlaces inferiores de las marcas se rediseñaron como botones compactos con SVG y estados hover/foco.
 
 **Validación:** cambio de panel y `aria-labelledby`, selección exclusiva, URLs primarias correctas para tres marcas, seis botones sociales con SVG, ausencia de overflow y sintaxis JavaScript.
+
+**Vista previa social versionada:**
+
+- Se mantuvo `assets/social-preview.jpg` en 1200 × 630 como imagen horizontal de tarjeta grande.
+- La URL destinada a compartir pasó a `https://ian-grinbank-portafolio.vercel.app/?v=4` para invalidar la caché anterior de WhatsApp.
+- Open Graph y Twitter apuntan a `social-preview.jpg?v=4`; se agregaron canonical, `og:site_name`, `og:image:url` y `twitter:image:alt`.
+- El dominio limpio continúa siendo la URL canónica del sitio.

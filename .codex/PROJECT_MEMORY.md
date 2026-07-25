@@ -4,6 +4,8 @@
 
 El nombre y título del portafolio es `Ian Grinbank | Portafolio`. El cliente indicó expresamente que no debe modificarse salvo nueva solicitud suya.
 
+La URL canónica es `https://ian-grinbank-portafolio.vercel.app/`. Para compartir en aplicaciones con caché de previews se usa actualmente `https://ian-grinbank-portafolio.vercel.app/?v=4`.
+
 ## Identidad y objetivo verificables
 
 El sitio comunica los servicios y trabajos de Ian Grinbank. La jerarquía profesional definida por el cliente es “Analista de Marketing, Content Creator y Edición de video”. El contenido visible afirma más de seis años de experiencia; esa afirmación ya existía y fue ratificada en el brief, pero no hay documentación adicional que la valide de forma independiente.
